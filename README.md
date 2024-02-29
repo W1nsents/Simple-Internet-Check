@@ -1,2 +1,2 @@
 # Simple-Internet-Check
-Checks internet connection
+Checks internet connection.
