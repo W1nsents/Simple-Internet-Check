@@ -31,11 +31,11 @@ namespace Internet.Checker
             try
             {
                 Dns.GetHostEntry("google.com");
-                return true;
+                return false;
             }
             catch
             {
-                return false;
+                return true;
             }
         }
     }
