@@ -28,14 +28,17 @@ namespace Internet.Checker
     {
         public static bool OK()
         {
-            try
+            using (WebClient wc = new WebClient())
             {
-                Dns.GetHostEntry("google.com");
-                return false;
-            }
-            catch
-            {
-                return true;
+                try
+                {
+                    Dns.GetHostEntry("google.com");
+                    return false;
+                }
+                catch
+                {
+                    return true;
+                }
             }
         }
     }
